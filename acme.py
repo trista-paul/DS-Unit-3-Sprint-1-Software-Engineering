@@ -34,4 +34,27 @@ class Product:
           return '...boom!'
         if product > 50:
           return '...BABOOM!!'
-   
+    
+    
+class BoxingGlove(Product):
+    '''
+    override default weight and interaction with explodability
+    '''
+    def __init__(self, name, price=10, weight=10, flammability=0.5,
+                 id=random.randint(100000, 9999999)):
+        self.name = name
+        self.price = price
+        self.weight = weight
+        self.flammability = flammability
+        self.id = id
+        
+    def punch(self):
+        if self.weight < 5:
+            return 'that tickles!'
+        if self.weight >= 5 and self.weight < 15:
+            return 'hey, that hurt!'
+        if self.weight > 15:
+            return 'OUCH!'
+        
+     def explodability(self):
+        return "it's a glove."
