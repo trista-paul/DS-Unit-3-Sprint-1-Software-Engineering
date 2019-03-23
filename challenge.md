@@ -264,9 +264,18 @@ career here, you'll have to answer the following:
 - What, in your opinion, is an important part of code reviews? That is, what is
   something you pay attention to when you review code, and that you appreciate
   when others do the same for your code?
+  ### When I reviewed Donaldo's code I was looking at the big picture - if a function
+  ### seemed useful given the input and goal and so on. For example, I suggested
+  ### he make his datetime function work on an existing dataframe.
+  ### I looked at what he did differently from me and how I could improve mine from it.
+  ### I had a much better understanding of classes after reviewing another's code
+  ### than I had from the lecture alone.
 - We have an awful lot of computers here, and it gets pretty confusing with
   slightly different things running on all of them. How could containers help us
   improve this situation?
+  ### Containers allow packages to be easily shared between computers
+  ### and function as they did on host. Less strict sharing methods could
+  ### make the original condition of the code unreproducible.
 
 Answer both of these questions (baseline ~5 sentences) here in text.
 
