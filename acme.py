@@ -1,11 +1,8 @@
+import random
+
 """
 models the products at Acme corp.
 """
-
-"""
-imports
-"""
-import random
 
 
 class Product:
@@ -16,7 +13,7 @@ class Product:
         self.weight = weight
         self.flammability = flammability
         self.id = id
-       
+
     def stealability(self):
         ratio = self.price/self.weight
         if ratio < 0.5:
@@ -25,17 +22,17 @@ class Product:
             return 'kinda stealable'
         if ratio >= 1:
             return 'very stealable!'
-          
+
     def explodability(self):
         product = self.flammability*self.weight
         if product < 10:
-          return '...fizzle.'
+            return '...fizzle.'
         if product >= 10 and product < 50:
-          return '...boom!'
+            return '...boom!'
         if product > 50:
-          return '...BABOOM!!'
-    
-    
+            return '...BABOOM!!'
+
+
 class BoxingGlove(Product):
     '''
     override default weight and interaction with explodability
@@ -47,7 +44,7 @@ class BoxingGlove(Product):
         self.weight = weight
         self.flammability = flammability
         self.id = id
-        
+
     def punch(self):
         if self.weight < 5:
             return 'that tickles!'
@@ -55,6 +52,6 @@ class BoxingGlove(Product):
             return 'hey, that hurt!'
         if self.weight > 15:
             return 'OUCH!'
-        
+
     def explodability(self):
         return "it's a glove."
